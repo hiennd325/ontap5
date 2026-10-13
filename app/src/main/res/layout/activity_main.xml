@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Quản lý Tiêu thụ Điện"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Tên chủ hộ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tên chủ hộ:" />
+
+        <EditText
+            android:id="@+id/edtTenChuHo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:inputType="textPersonName"
+            android:hint="Nhập tên chủ hộ" />
+    </LinearLayout>
+
+    <!-- Khu vực -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Khu vực:" />
+
+        <RadioGroup
+            android:id="@+id/rgKhuVuc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_marginStart="8dp">
+
+            <RadioButton
+                android:id="@+id/rbKV1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Khu vực 1"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/rbKV2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Khu vực 2" />
+
+            <RadioButton
+                android:id="@+id/rbKV3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Khu vực 3" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <!-- Số kWh tiêu thụ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="12dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Số kWh tiêu thụ:" />
+
+        <EditText
+            android:id="@+id/edtSoKWh"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:inputType="number"
+            android:hint="Nhập số kWh" />
+    </LinearLayout>
+
+    <!-- Nút lệnh -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="12dp">
+
+        <Button
+            android:id="@+id/btnThemMoi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Thêm mới"
+            android:layout_marginEnd="4dp" />
+
+        <Button
+            android:id="@+id/btnSua"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Sửa"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp" />
+
+        <Button
+            android:id="@+id/btnThongKe"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Thống kê"
+            android:layout_marginStart="4dp" />
+    </LinearLayout>
+
+    <!-- Header danh sách -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#CCCCCC"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Chủ hộ"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Khu vực"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Số kWh"
+            android:textStyle="bold"
+            android:gravity="end" />
+    </LinearLayout>
+
+    <!-- ListView -->
+    <ListView
+        android:id="@+id/lvDanhSach"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>
